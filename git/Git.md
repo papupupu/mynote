@@ -16,3 +16,8 @@
   * 如果远程分支不存在,直接**git push -u remote-repo/remote-branch branch**创建并且改到跟踪新的远程分支
   * 此时如果想要将已经创建好的本地分支和已经存在的元程分支联系起来git branch --set-upstream-to=repo_name/<远程分支名称> <本地分支名称>
     
+# 创建并初始化仓库
+~~~
+git init 
+git remote add orgin(本地仓库远程的别名) ssh_url
+~~~
