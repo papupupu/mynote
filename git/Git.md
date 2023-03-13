@@ -1,6 +1,6 @@
 # 创建仓库
 
-* 初始化仓库
+初始化仓库
   * **git init**
   * **git remote add remote-name URL**(**https**的话每次都要用户名密码,**ssh**的话需要将本地的公钥**id_rsa.pub**添加进入git仓库**个人公钥**中)
   * 此时**git remote -vv**可查看远程仓库名 
@@ -16,7 +16,8 @@
   * 如果远程分支不存在,直接**git push -u remote-repo/remote-branch branch**创建并且改到跟踪新的远程分支
   * 此时如果想要将已经创建好的本地分支和已经存在的元程分支联系起来git branch --set-upstream-to=repo_name/<远程分支名称> <本地分支名称>
     
-# 创建并初始化仓库
+# 创建仓库
+## 初始化仓库
 ~~~ bash
 git init 
 ~~~
@@ -39,7 +40,7 @@ git fetch
 git push -u origin(远程库别名) branch(本地分支名) 
 ~~~
 
-# 创建新的本地分支
+## 创建新的本地分支
 ~~~ bash
 
 #创建前用当前本地分支中,将add后但没有commit的内容存进stash中,
@@ -53,4 +54,24 @@ git branch --set-upstream-to=remote-repo/remote-branch
 git push -u remote-repo/remote-branch branch #创建并且改到跟踪新的远程分支
 #此时如果想要将已经创建好的本地分支和已经存在的元程分支联系起来
 git branch --set-upstream-to=repo_name/<远程分支名称> <本地分支名称>
-  
+~~~
+
+# 分支和版本操作
+## 查看版本和分支
+``` bash
+#查看的commit版本
+git log 
+#查看本地的分支，以及与远程分支的关系
+git branch -vv
+```
+## 切换分支以及切换版本 
+``` bash
+#git log后切换到旧版本
+git checkout oldnumble
+#创建新分支,以便修改旧版本
+git branch branch-name #此命令只是创建没有改变到该分支
+#或者使用checkout,创建并切换
+git checkout branch-name #如果分支存在，那么改变到该分支，不存在，则创建并该到
+#切换回去新版本就直接checkout,直接到了该分支的最新版
+git chackoue branch-name
+```
