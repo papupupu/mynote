@@ -34,3 +34,6 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 vim.cmd[[colorscheme tokyonight-moon]]
+
+--设置浏览器
+let g:leetcode_browser = 'chrome'

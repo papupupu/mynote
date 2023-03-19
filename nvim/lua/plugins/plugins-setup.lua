@@ -61,8 +61,12 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
   use "iamcco/markdown-preview.nvim" -- markdown文件预览
+
   use "ekickx/clipboard-image.nvim" --截屏粘贴至markdown
+
+  use "ianding1/leetcode.vim" --leetcode插件
 
   if packer_bootstrap then
     require('packer').sync()
