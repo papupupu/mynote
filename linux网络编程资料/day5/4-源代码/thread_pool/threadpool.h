@@ -11,6 +11,8 @@ typedef struct threadpool_t threadpool_t;
  * @param queue_max_size   size of the queue.
  * @return a newly created thread pool or NULL
  */
+
+//最小线程数， 最大线程数量， 最大处理队列数量
 threadpool_t *threadpool_create(int min_thr_num, int max_thr_num, int queue_max_size);
 
 /**
