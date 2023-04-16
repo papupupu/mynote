@@ -1,0 +1,4 @@
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/
+Collecting mysql
+  Downloading https://mirrors.aliyun.com/pypi/packages/9a/52/8d29c58f6ae448a72fbc612955bd31accb930ca479a7ba7197f4ae4edec2/mysql-0.0.3-py3-none-any.whl (1.2 kB)

@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     inet_pton(AF_INET, "127.0.0.1", &servaddr.sin_addr);
     servaddr.sin_port = htons(SERV_PORT);
 
-    bind(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
+    //bind(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
 
     while (fgets(buf, BUFSIZ, stdin) != NULL) {
         n = sendto(sockfd, buf, strlen(buf), 0, (struct sockaddr *)&servaddr, sizeof(servaddr));
