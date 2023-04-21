@@ -32,7 +32,7 @@ git push -u origin(远程库别名) branch(本地分支名)
 ## https 链接
 ~~~ bash
 #如果使用的https的链接，现在github已经取消账户密码登陆了，取而代之的是token即令牌登陆
-git remote add orgin(本地仓库远程的别名) https_url
+git remote add origin(本地仓库远程的别名) https_url
 #查看远程
 git remote -v
 #先git fetch
@@ -47,6 +47,8 @@ git push -u origin(远程库别名) branch(本地分支名)
 git stash
 #创建新本地分支
 git checkout  -b new-branch-name
+#查看与本地分支与远程分支的关联情况
+git branch -vv
 #应该要先同步(即 git fetch)再进行后面**如果想改变本地分支跟踪的远程分支
 #即可改变跟踪成新的远程分支
 git branch --set-upstream-to=remote-repo/remote-branch
